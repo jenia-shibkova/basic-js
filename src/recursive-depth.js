@@ -1,6 +1,6 @@
 module.exports = class DepthCalculator {
   calculateDepth(arr, result = [1], count = 1) {
-    
+
     arr.forEach((element) => {
       if (element instanceof Array) {
         result.push(count + 1);
@@ -8,6 +8,6 @@ module.exports = class DepthCalculator {
       } 
     });
      
-    return Math.max.apply(null, result);
+    return Math.max(...result);
   }
 };
